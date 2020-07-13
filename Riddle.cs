@@ -2,7 +2,7 @@ using System;
 
 namespace project
 {
-  public class project
+  public class Riddle
   {
     public static void Main()
     {
