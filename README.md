@@ -35,11 +35,11 @@ _If you have any questions or concerns please contact me at spencer.moody@Outloo
 ## Technologies Used
 
 * _GitHub_
-* _HTML_
-* _CSS_
-* _BootStrap_
 * _Visual Studio Code_
 * _C#_
+* 
 ### License
 
-*Copyright (c) 2020 **_Spencer Moody MIT_***
+*Copyright (c) 2020 **_Spencer Moody & Micheal Hansen_**
+
+_This program is covered under the MIT License_
