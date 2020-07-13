@@ -5,6 +5,7 @@ namespace Riddle.SphinxRiddler
 {
   public class Sphinx
   {
+    private Random rnd = new Random();
     private List<int> _usedRiddles = new List<int>(0);
     public List<int> GetUsedRiddles()
     {
@@ -39,7 +40,6 @@ namespace Riddle.SphinxRiddler
 
     private int GetRandom()
     {
-      Random rnd = new Random();
       int randomResult = rnd.Next(0, 3);
       if (GetUsedRiddles().Count == 3)
       {
