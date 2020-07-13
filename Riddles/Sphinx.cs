@@ -5,7 +5,7 @@ namespace Riddle.SphinxRiddler
 {
   public class Sphinx
   {
-    private Random rnd = new Random();
+    private static Random rnd = new Random();
     private List<int> _usedRiddles = new List<int>(0);
     public List<int> GetUsedRiddles()
     {
@@ -40,17 +40,18 @@ namespace Riddle.SphinxRiddler
 
     private int GetRandom()
     {
-      int randomResult = rnd.Next(0, 3);
       if (GetUsedRiddles().Count == 3)
       {
         SetUsedRiddles(-1);
       }
-      bool isInList = GetUsedRiddles().IndexOf(randomResult) != -1;
-      while (isInList)
+      int randomResult = 0;
+      bool isInList = true;
+      do
       {
-        randomResult = rnd.Next(0,3);
+        randomResult = rnd.Next(0, 3);
         isInList = GetUsedRiddles().IndexOf(randomResult) != -1;
       }
+      while (isInList);
       SetUsedRiddles(randomResult);
       return randomResult;
     }
